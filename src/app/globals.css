@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-midnight: #050505;
+  --color-brand-midnight-light: #111111;
+  --color-brand-midnight-lighter: #1a1a1a;
+  
+  --color-brand-violet: #8b5cf6;
+  --color-brand-violet-light: #a78bfa;
+  --color-brand-violet-dark: #7c3aed;
+  
+  --color-brand-cyan: #22d3ee;
+  --color-brand-cyan-light: #67e8f9;
+  --color-brand-cyan-dark: #0891b2;
+  
+  --font-display: var(--font-outfit), var(--font-geist-sans), sans-serif;
+  --font-sans: var(--font-inter), var(--font-geist-sans), sans-serif;
+}
+
+:root {
+  --background: #050505;
+  --foreground: #f8fafc;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+/* Custom Utilities for Premium Motion & Layout */
+
+/* Infinite marquee ticker */
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.animate-ticker-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 30s linear infinite;
+}
+.animate-ticker-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Smooth layout transitions */
+.page-transition-enter { opacity: 0; transform: translateY(10px); }
+.page-transition-enter-active { opacity: 1; transform: translateY(0); transition: opacity 300ms ease, transform 300ms ease; }
+.page-transition-exit { opacity: 1; transform: translateY(0); }
+.page-transition-exit-active { opacity: 0; transform: translateY(-10px); transition: opacity 300ms ease, transform 300ms ease; }
+
+/* Text stroke for decorative outlines */
+.text-stroke-violet {
+  -webkit-text-stroke: 1px #8b5cf6;
+  color: transparent;
+}
+
+.text-stroke-cyan {
+  -webkit-text-stroke: 1px #22d3ee;
+  color: transparent;
+}
+
+/* Glassmorphism details */
+.glassmorphic {
+  background: rgba(17, 17, 17, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glassmorphic-light {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glassmorphic-glow {
+  background: rgba(17, 17, 17, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+}
+
+/* Hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Flip card layout for team section */
+.flip-card { perspective: 1000px; }
+.flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; }
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 12px; }
+.flip-card-back { transform: rotateY(180deg); }
+
+/* Fade-in utility (used in sections) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.7s ease forwards;
+}
+
+/* Text stroke lime for code editor display */
+.text-stroke-lime {
+  -webkit-text-stroke: 1px #ace539;
+  color: transparent;
+}

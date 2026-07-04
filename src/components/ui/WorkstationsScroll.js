@@ -23,6 +23,59 @@ export default function WorkstationsScroll() {
 
   const workstations = [
     {
+      specialist: "Hari Lal P",
+      role: "CEO",
+      service: "Branding",
+      task: "Business Analysis",
+      description:
+        "Hari Lal is planning the brand identity design,mapping out the logo design for the brand.",
+      icon: <IconPalette className="w-4 h-4" />,
+      accent: "#ace539",
+      screen: (
+        <div className="w-full h-full bg-[#18181b] text-white p-5 flex flex-col justify-between font-mono text-[9px] select-none">
+          <div className="flex justify-between items-center border-b border-white/5 pb-2">
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
+              vibe_reel_04.prproj
+            </span>
+            <span className="text-[#ace539] font-bold">RENDERING (60 FPS)</span>
+          </div>
+          <div className="flex-grow grid grid-cols-3 gap-2 my-2 items-center">
+            <div className="col-span-2 aspect-video bg-black rounded-sm border border-white/10 relative flex items-center justify-center overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=180&q=80"
+                className="w-full h-full object-cover opacity-60"
+                alt="grading thumbnail"
+              />
+              <div className="absolute top-1.5 right-1.5 bg-black/60 px-1 py-0.5 text-[7px] text-[#ace539]">00:12:04</div>
+              <div className="w-5 h-5 rounded-full bg-[#ace539] text-[#020349] flex items-center justify-center font-bold text-[8px]">▶</div>
+            </div>
+            <div className="space-y-2 border-l border-white/5 pl-2">
+              <span className="text-[7px] text-slate-400 block">Luma Offset</span>
+              <div className="w-8 h-8 rounded-full border border-[#ace539] mx-auto relative flex items-center justify-center">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#ace539] absolute top-1 left-2" />
+              </div>
+              <span className="text-[7px] text-slate-400 block text-center">Gain: +1.2</span>
+            </div>
+          </div>
+          <div className="space-y-1.5 border-t border-white/5 pt-2">
+            {[
+              { label: "V1 (Reels)", color: "#ace539", width: "60%" },
+              { label: "A1 (Audio)", color: "#3b82f6", width: "85%" },
+            ].map((track, i) => (
+              <div key={i} className="flex gap-1.5 items-center">
+                <span className="text-[7px] w-10 text-slate-400">{track.label}</span>
+                <div className={`flex-grow h-2.5 rounded-sm relative overflow-hidden`} style={{ background: `${track.color}20`, border: `1px solid ${track.color}30` }}>
+                  <div className="h-full rounded-sm" style={{ width: track.width, background: `${track.color}60` }} />
+                  {i === 0 && <div className="absolute left-[30%] top-0 w-0.5 h-full bg-white/80" />}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ),
+    },
+    {
       specialist: "Vipin Das",
       role: "Creative Head",
       service: "Branding",
@@ -125,61 +178,9 @@ export default function WorkstationsScroll() {
         </div>
       ),
     },
+    
     {
-      specialist: "Anshif",
-      role: "Branding & VFX Coordinator",
-      service: "Media Production",
-      task: "Timeline Track Grade",
-      description:
-        "Anshif is grading high-retention vertical reels, adjusting color offsets and syncing keyframes for animated text assets.",
-      icon: <IconMovie className="w-4 h-4" />,
-      accent: "#ace539",
-      screen: (
-        <div className="w-full h-full bg-[#18181b] text-white p-5 flex flex-col justify-between font-mono text-[9px] select-none">
-          <div className="flex justify-between items-center border-b border-white/5 pb-2">
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              vibe_reel_04.prproj
-            </span>
-            <span className="text-[#ace539] font-bold">RENDERING (60 FPS)</span>
-          </div>
-          <div className="flex-grow grid grid-cols-3 gap-2 my-2 items-center">
-            <div className="col-span-2 aspect-video bg-black rounded-sm border border-white/10 relative flex items-center justify-center overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=180&q=80"
-                className="w-full h-full object-cover opacity-60"
-                alt="grading thumbnail"
-              />
-              <div className="absolute top-1.5 right-1.5 bg-black/60 px-1 py-0.5 text-[7px] text-[#ace539]">00:12:04</div>
-              <div className="w-5 h-5 rounded-full bg-[#ace539] text-[#020349] flex items-center justify-center font-bold text-[8px]">▶</div>
-            </div>
-            <div className="space-y-2 border-l border-white/5 pl-2">
-              <span className="text-[7px] text-slate-400 block">Luma Offset</span>
-              <div className="w-8 h-8 rounded-full border border-[#ace539] mx-auto relative flex items-center justify-center">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#ace539] absolute top-1 left-2" />
-              </div>
-              <span className="text-[7px] text-slate-400 block text-center">Gain: +1.2</span>
-            </div>
-          </div>
-          <div className="space-y-1.5 border-t border-white/5 pt-2">
-            {[
-              { label: "V1 (Reels)", color: "#ace539", width: "60%" },
-              { label: "A1 (Audio)", color: "#3b82f6", width: "85%" },
-            ].map((track, i) => (
-              <div key={i} className="flex gap-1.5 items-center">
-                <span className="text-[7px] w-10 text-slate-400">{track.label}</span>
-                <div className={`flex-grow h-2.5 rounded-sm relative overflow-hidden`} style={{ background: `${track.color}20`, border: `1px solid ${track.color}30` }}>
-                  <div className="h-full rounded-sm" style={{ width: track.width, background: `${track.color}60` }} />
-                  {i === 0 && <div className="absolute left-[30%] top-0 w-0.5 h-full bg-white/80" />}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      ),
-    },
-    {
-      specialist: "Mohammed Thanzeel .N",
+      specialist: "Mohammed Thanzeel N",
       role: "Software Developer",
       service: "IT & Tech",
       task: "Turbopack Next.js Build",
@@ -223,7 +224,7 @@ export default function WorkstationsScroll() {
     {
       specialist: "Bijin Lal",
       role: "Operations Manager",
-      service: "AI & Automations",
+      service: "Media Production",
       task: "Node Logic Integrations",
       description:
         "Bijin is creating automation loops, syncing API webhooks between database actions, email servers, and project logs.",

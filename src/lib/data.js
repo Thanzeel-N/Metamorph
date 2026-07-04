@@ -222,13 +222,13 @@ export const stats = [
 
 export const teamMembers = [
   {
-    name: "Hari Lal .P",
-    role: "Owner",
+    name: "Hari Lal P",
+    role: "CEO",
     bio: "Visionary founder leading Metamorph's mission to integrate brand, media, and technology under one roof.",
     image: "linear-gradient(135deg, #12130f 0%, #ace539 100%)",
   },
   {
-    name: "Mohammed Thanzeel .N",
+    name: "Mohammed Thanzeel N",
     role: "Software Developer",
     bio: "Full-stack engineer specializing in Next.js, React Native, and scalable digital platforms.",
     image: "linear-gradient(135deg, #ace539 0%, #12130f 100%)",

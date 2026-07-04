@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Privacy Policy | Metamorph.live",
+  title: "Metamorph.live",
   description: "Metamorph.live Privacy Policy. For enquiries contact hello@metamorph.solutions.",
 };
 

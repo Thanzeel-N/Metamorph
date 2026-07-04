@@ -2,7 +2,7 @@ import Link from "next/link";
 import { IconBolt, IconArrowRight, IconChecks } from "@tabler/icons-react";
 
 export const metadata = {
-  title: "Our Process | Metamorph.live",
+  title: "Metamorph.live",
   description: "Learn how we translate business challenges into branding systems, media assets, and high-performance software applications.",
 };
 

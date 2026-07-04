@@ -1,13 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { 
-  IconMail, 
-  IconPhone, 
-  IconMapPin, 
-  IconClock, 
-  IconBrandLinkedin, 
-  IconBrandInstagram, 
+import {
+  IconMail,
+  IconPhone,
+  IconMapPin,
+  IconClock,
+  IconBrandLinkedin,
+  IconBrandInstagram,
   IconBrandBehance,
   IconArrowRight,
   IconCircleCheck,
@@ -24,9 +24,8 @@ export default function ContactClient() {
     phone: "",
     service: "branding",
     brief: "",
-    budget: "$2.5k - $5k",
   });
-  
+
   const [formState, setFormState] = useState("idle"); // 'idle' | 'loading' | 'success' | 'error'
 
   useEffect(() => {
@@ -65,27 +64,22 @@ export default function ContactClient() {
       phone: "",
       service: "branding",
       brief: "",
-      budget: "$2.5k - $5k",
     });
     setFormState("idle");
   };
 
-  const budgetRanges = [
-    { label: "< $2.5k", value: "< $2.5k" },
-    { label: "$2.5k - $5k", value: "$2.5k - $5k" },
-    { label: "$5k - $10k", value: "$5k - $10k" },
-    { label: "$10k+", value: "$10k+" },
-  ];
+
+
 
   return (
     <div className="w-full min-h-screen flex flex-col pt-20 md:pt-24">
       <div className="flex-grow grid grid-cols-1 lg:grid-cols-2">
-        
+
         {/* LEFT PANEL: CONTACT FORM (Deep Dark BG, White Text) */}
         <div className="bg-[#12130f] text-white p-8 md:p-16 lg:p-24 flex flex-col justify-center relative overflow-hidden">
           {/* Subtle decoration */}
           <div className="absolute top-0 left-0 w-64 h-64 bg-[#ace539] opacity-[0.03] rounded-full filter blur-[80px]" />
-          
+
           <div className="max-w-xl mx-auto w-full space-y-8 relative z-10">
             <div className="space-y-3">
               <span className="font-display font-bold text-xs uppercase tracking-[0.25em] text-[#ace539]">
@@ -133,7 +127,7 @@ export default function ContactClient() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6 font-sans text-sm">
-                
+
                 {/* Name */}
                 <div className="space-y-2">
                   <label htmlFor="name" className="block text-xs uppercase tracking-wider text-slate-400 font-bold">
@@ -221,32 +215,6 @@ export default function ContactClient() {
                   />
                 </div>
 
-                {/* Budget Range (Radios styled as buttons) */}
-                <div className="space-y-2">
-                  <span className="block text-xs uppercase tracking-wider text-slate-400 font-bold">
-                    Estimated Budget Range
-                  </span>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                    {budgetRanges.map((range) => {
-                      const isSelected = formData.budget === range.value;
-                      return (
-                        <button
-                          key={range.value}
-                          type="button"
-                          disabled={formState === "loading"}
-                          onClick={() => setFormData({ ...formData, budget: range.value })}
-                          className={`py-3 rounded-sm font-bold text-xs transition-all duration-300 border text-center cursor-pointer disabled:opacity-50 ${
-                            isSelected
-                              ? "bg-[#ace539] text-[#12130f] border-[#ace539]"
-                              : "bg-transparent text-white border-white/10 hover:border-white"
-                          }`}
-                        >
-                          {range.label}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
 
                 {/* Submit button */}
                 <div className="pt-4">
@@ -272,13 +240,13 @@ export default function ContactClient() {
         {/* RIGHT PANEL: INFO & MAP (Medium Olive-Charcoal BG, White Text) */}
         <div className="bg-[#21231d] text-white p-8 md:p-16 lg:p-24 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/5">
           <div className="max-w-xl mx-auto w-full space-y-12">
-            
+
             {/* Address Details card */}
             <div className="space-y-6">
               <h2 className="font-display font-extrabold text-xl uppercase tracking-wider text-[#ace539]">
                 Contact Info
               </h2>
-              
+
               <ul className="space-y-6 text-sm font-sans">
                 {/* Email */}
                 <li className="flex items-start gap-4">
@@ -314,7 +282,7 @@ export default function ContactClient() {
                   <div>
                     <span className="block text-xs uppercase tracking-wider text-slate-400 font-display">Visit Us</span>
                     <span className="font-bold block text-slate-300">
-                      Majestic Tower, Vengara<br/>Malappuram, Kerala
+                      Majestic Tower, Vengara<br />Malappuram, Kerala
                     </span>
                   </div>
                 </li>

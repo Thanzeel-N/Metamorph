@@ -1,7 +1,7 @@
 import ClientsClient from "./page-client";
 
 export const metadata = {
-  title: "Clients & Testimonials | Metamorph.live",
+  title: "Metamorph.live",
   description: "Trusted by startups and enterprises. See what our clients say about working with Metamorph.live.",
 };
 

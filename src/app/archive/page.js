@@ -2,7 +2,7 @@ import Link from "next/link";
 import { IconArrowRight, IconPhoto } from "@tabler/icons-react";
 
 export const metadata = {
-  title: "Poster & Asset Archive | Metamorph.live",
+  title: "Metamorph.live",
   description: "Explore our archive of premium visual designs, promotional campaigns, and brand poster assets.",
 };
 

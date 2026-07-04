@@ -9,7 +9,7 @@ import {
 } from "@tabler/icons-react";
 
 export const metadata = {
-  title: "About Us | Metamorph",
+  title: "Metamorph.live",
   description: "One integrated team of designers, strategists, and engineers.",
 };
 

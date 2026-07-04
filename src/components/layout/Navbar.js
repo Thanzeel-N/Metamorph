@@ -24,10 +24,9 @@ export default function Navbar() {
     : "top-0 max-w-7xl mx-auto px-6 py-6 border-b border-transparent bg-transparent";
 
   const linkClass = (path) =>
-    `font-medium text-sm transition-colors py-2 ${
-      pathname === path || pathname.startsWith(path + "/")
-        ? "text-[#ace539]"
-        : "text-slate-300 hover:text-white"
+    `font-medium text-sm transition-colors py-2 ${pathname === path || pathname.startsWith(path + "/")
+      ? "text-[#ace539]"
+      : "text-slate-300 hover:text-white"
     }`;
 
   return (

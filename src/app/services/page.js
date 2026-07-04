@@ -3,7 +3,7 @@ import { services } from "@/lib/data";
 import { IconCheck, IconArrowRight, IconBolt } from "@tabler/icons-react";
 
 export const metadata = {
-  title: "Services | Metamorph",
+  title: "Metamorph.live",
   description: "Explore our full suite: brand identity, growth marketing, reels & media production, and Next.js web platforms.",
 };
 

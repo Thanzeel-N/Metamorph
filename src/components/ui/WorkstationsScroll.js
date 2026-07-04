@@ -23,12 +23,12 @@ export default function WorkstationsScroll() {
 
   const workstations = [
     {
-      specialist: "Julian Cross",
-      role: "Founder & Creative Director",
+      specialist: "Vipin Das",
+      role: "Creative Head",
       service: "Branding",
       task: "Vector Identity Paths",
       description:
-        "Julian is aligning the visual anchor coordinates for Luna Beverage's retro-futuristic packaging, refining typography tracking and defining vector bezier curves.",
+        "Vipin is aligning the visual anchor coordinates for Luna Beverage's retro-futuristic packaging, refining typography tracking and defining vector bezier curves.",
       icon: <IconPalette className="w-4 h-4" />,
       accent: "#ace539",
       screen: (
@@ -71,12 +71,12 @@ export default function WorkstationsScroll() {
       ),
     },
     {
-      specialist: "Elena Rostova",
-      role: "Head of Growth & Ads",
+      specialist: "Khairunnisa K",
+      role: "Digital Marketing Head",
       service: "Marketing",
       task: "Paid Funnel Acquisition",
       description:
-        "Elena is auditing an active social ad account, allocating budgets to high-converting keyword cohorts and checking real-time funnel ROI.",
+        "Khairunnisa is auditing an active social ad account, allocating budgets to high-converting keyword cohorts and checking real-time funnel ROI.",
       icon: <IconSpeakerphone className="w-4 h-4" />,
       accent: "#ace539",
       screen: (
@@ -126,12 +126,12 @@ export default function WorkstationsScroll() {
       ),
     },
     {
-      specialist: "Sasha Grier",
-      role: "Director of Media",
+      specialist: "Anshif",
+      role: "Branding & VFX Coordinator",
       service: "Media Production",
       task: "Timeline Track Grade",
       description:
-        "Sasha is grading high-retention vertical reels, adjusting color offsets and syncing keyframes for animated text assets.",
+        "Anshif is grading high-retention vertical reels, adjusting color offsets and syncing keyframes for animated text assets.",
       icon: <IconMovie className="w-4 h-4" />,
       accent: "#ace539",
       screen: (
@@ -179,12 +179,12 @@ export default function WorkstationsScroll() {
       ),
     },
     {
-      specialist: "Kenji Sato",
-      role: "Lead Developer",
+      specialist: "Mohammed Thanzeel .N",
+      role: "Software Developer",
       service: "IT & Tech",
       task: "Turbopack Next.js Build",
       description:
-        "Kenji is inspecting code segments, implementing dynamic route layouts, and executing hot-reloading checks under Next.js 16.",
+        "Thanzeel is inspecting code segments, implementing dynamic route layouts, and executing hot-reloading checks under Next.js 16.",
       icon: <IconCode className="w-4 h-4" />,
       accent: "#ace539",
       screen: (
@@ -204,7 +204,7 @@ export default function WorkstationsScroll() {
               <><span className="text-slate-600">4  </span>{"  "}<span className="text-purple-400">const</span> project = works.<span className="text-blue-400">find</span>(p =&gt; p.slug === slug);</>,
               <><span className="text-slate-600">5  </span>{"  "}<span className="text-purple-400">return</span> (</>,
               <><span className="text-slate-600 bg-white/5 block w-full px-1 -mx-1">6  </span><span className="text-[#ace539]">{"    "}&lt;h1 className=&quot;text-stroke-lime&quot;&gt;{"{ project.name }"}&lt;/h1&gt;</span></>,
-              <><span className="text-slate-600">7  </span>{"  "});</>  ,
+              <><span className="text-slate-600">7  </span>{"  "});</>,
               <><span className="text-slate-600">8  </span>{"}"}</>,
             ].map((line, i) => (
               <div key={i} className="text-[8.5px]">{line}</div>
@@ -221,12 +221,12 @@ export default function WorkstationsScroll() {
       ),
     },
     {
-      specialist: "Aiden Miller",
-      role: "Lead Automation Engineer",
+      specialist: "Bijin Lal",
+      role: "Operations Manager",
       service: "AI & Automations",
       task: "Node Logic Integrations",
       description:
-        "Aiden is creating automation loops, syncing API webhooks between database actions, email servers, and project logs.",
+        "Bijin is creating automation loops, syncing API webhooks between database actions, email servers, and project logs.",
       icon: <IconSettingsAutomation className="w-4 h-4" />,
       accent: "#ace539",
       screen: (
@@ -250,11 +250,10 @@ export default function WorkstationsScroll() {
             ].map((node, i) => (
               <div
                 key={i}
-                className={`p-2.5 rounded-sm text-center z-10 ${
-                  node.highlight
+                className={`p-2.5 rounded-sm text-center z-10 ${node.highlight
                     ? "bg-[#ace539] text-[#020349] font-bold shadow-[0_0_20px_rgba(172,229,57,0.3)]"
                     : "bg-white/5 border border-white/10"
-                }`}
+                  }`}
               >
                 <div className="text-[8px] uppercase font-bold">{node.label}</div>
                 <div className={`text-[7px] mt-0.5 ${node.highlight ? "opacity-70" : "text-slate-400"}`}>{node.sub}</div>
@@ -404,27 +403,24 @@ export default function WorkstationsScroll() {
               <button
                 key={idx}
                 onClick={() => handleTabChange(idx)}
-                className={`tab-item group text-left rounded-xl transition-all duration-300 border relative overflow-hidden ${
-                  activeTab === idx
+                className={`tab-item group text-left rounded-xl transition-all duration-300 border relative overflow-hidden ${activeTab === idx
                     ? "bg-[#131310] border-white/10 shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
                     : "bg-transparent border-transparent hover:bg-white/[0.03] hover:border-white/5"
-                }`}
+                  }`}
               >
                 {/* Active indicator line */}
                 <div
-                  className={`absolute left-0 top-0 bottom-0 w-[2px] rounded-full transition-all duration-300 ${
-                    activeTab === idx ? "bg-[#ace539]" : "bg-transparent"
-                  }`}
+                  className={`absolute left-0 top-0 bottom-0 w-[2px] rounded-full transition-all duration-300 ${activeTab === idx ? "bg-[#ace539]" : "bg-transparent"
+                    }`}
                 />
 
                 <div className={`px-5 py-4 flex items-center gap-4 transition-all duration-300 ${activeTab === idx ? "opacity-100" : "opacity-50 group-hover:opacity-80"}`}>
                   {/* Icon */}
                   <div
-                    className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-                      activeTab === idx
+                    className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 ${activeTab === idx
                         ? "bg-[#ace539] text-[#0a0a0a]"
                         : "bg-white/5 text-white/50"
-                    }`}
+                      }`}
                   >
                     {work.icon}
                   </div>
@@ -449,9 +445,8 @@ export default function WorkstationsScroll() {
 
                   {/* Arrow */}
                   <IconChevronRight
-                    className={`w-4 h-4 flex-shrink-0 transition-all duration-300 ${
-                      activeTab === idx ? "text-[#ace539] translate-x-0" : "text-white/20 -translate-x-1"
-                    }`}
+                    className={`w-4 h-4 flex-shrink-0 transition-all duration-300 ${activeTab === idx ? "text-[#ace539] translate-x-0" : "text-white/20 -translate-x-1"
+                      }`}
                   />
                 </div>
               </button>
@@ -515,11 +510,10 @@ export default function WorkstationsScroll() {
             <button
               key={idx}
               onClick={() => handleTabChange(idx)}
-              className={`rounded-full transition-all duration-300 ${
-                activeTab === idx
+              className={`rounded-full transition-all duration-300 ${activeTab === idx
                   ? "w-6 h-1.5 bg-[#ace539]"
                   : "w-1.5 h-1.5 bg-white/20 hover:bg-white/40"
-              }`}
+                }`}
               aria-label={`Switch to ${workstations[idx].service}`}
             />
           ))}

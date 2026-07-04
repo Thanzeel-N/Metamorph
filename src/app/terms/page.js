@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Terms of Service | Metamorph.live",
+  title: "Metamorph.live",
   description: "Metamorph.live Terms of Service. For enquiries contact hello@metamorph.solutions.",
 };
 

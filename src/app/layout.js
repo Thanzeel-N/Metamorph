@@ -18,7 +18,10 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Metamorph.live — Premium Business Solutions Company",
+  title: {
+    default: "Metamorph.live",
+    template: "Metamorph.live",
+  },
   description: "Complete Business Solutions spanning Branding, Growth Marketing, Media Production (Reels, posters), and IT Systems (Next.js web apps, platforms, dashboards).",
 };
 

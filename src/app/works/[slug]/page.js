@@ -7,15 +7,9 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const project = works.find((w) => w.slug === slug);
   if (!project) {
-    return {
-      title: "Project Not Found | Metamorph.live",
-      description: "The requested project case study could not be found.",
-    };
+    return { title: "Metamorph.live" };
   }
-  return {
-    title: `${project.name} — Case Study | Metamorph.live`,
-    description: (project.brief || project.challenge).substring(0, 155),
-  };
+  return { title: "Metamorph.live" };
 }
 
 export default async function WorkDetailPage({ params }) {

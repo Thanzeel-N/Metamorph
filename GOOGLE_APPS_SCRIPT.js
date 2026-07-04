@@ -40,11 +40,10 @@ function doPost(e) {
         "Phone",
         "Service",
         "Brief / Goals",
-        "Budget Range",
       ]);
 
       // Style the header row
-      const headerRange = sheet.getRange(1, 1, 1, 7);
+      const headerRange = sheet.getRange(1, 1, 1, 6);
       headerRange.setBackground("#ace539");
       headerRange.setFontWeight("bold");
       headerRange.setFontColor("#12130f");
@@ -58,7 +57,6 @@ function doPost(e) {
       data.phone || "",
       data.service || "",
       data.brief || "",
-      data.budget || "",
     ]);
 
     return ContentService

@@ -71,7 +71,7 @@ export default function ProcessScroll() {
             className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
             style={{
               opacity: activeIdx === idx ? 1 : 0,
-              filter: "brightness(0.18) saturate(0.45)",
+              filter: "brightness(0.35) saturate(0.7)",
             }}
           />
         ))}

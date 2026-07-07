@@ -78,7 +78,7 @@ export default function WorkstationsScroll() {
     {
       specialist: "Vipin Das",
       role: "Creative Head",
-      service: "Branding",
+      service: "Production",
       task: "Vector Identity Paths",
       description:
         "Vipin is aligning the visual anchor coordinates for Luna Beverage's retro-futuristic packaging, refining typography tracking and defining vector bezier curves.",
@@ -178,7 +178,6 @@ export default function WorkstationsScroll() {
         </div>
       ),
     },
-    
     {
       specialist: "Mohammed Thanzeel N",
       role: "Software Developer",
@@ -224,7 +223,7 @@ export default function WorkstationsScroll() {
     {
       specialist: "Bijin Lal",
       role: "Operations Manager",
-      service: "Media Production",
+      service: "Admin",
       task: "Node Logic Integrations",
       description:
         "Bijin is creating automation loops, syncing API webhooks between database actions, email servers, and project logs.",

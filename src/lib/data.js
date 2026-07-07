@@ -148,12 +148,11 @@ export const works = [
 
 export const clients = [
   { name: "Edupark", logo: "/images/clients/Edupark_Logo.png", category: "Startup" },
-  { name: "Elite", logo: "/images/clients/Elite.jpg", category: "SME" },
+  { name: "Elite", logo: "/images/clients/Elite.png", category: "SME", hoverBgWhite: true },
   { name: "LuluBuds", logo: "/images/clients/LuluBuds.png", category: "Startup" },
-  { name: "Ozone", logo: "/images/clients/OZONE.png", category: "Enterprise" },
-  { name: "Smart Academy", logo: "/images/clients/Smart Academy.png", category: "SME" },
+  { name: "Smart Academy", logo: "/images/clients/Smart Academy1.png", category: "SME" },
   { name: "Amber", logo: "/images/clients/amber.png", category: "Startup" },
-  { name: "Archiform", logo: "/images/clients/archiform.png", category: "SME" },
+  { name: "Archiform", logo: "/images/clients/archiform.png", category: "SME", scale: true, hoverBgWhite: true },
   { name: "Leonidaz", logo: "/images/clients/leonidaz.png", category: "Enterprise" },
   { name: "Universal Sanitary", logo: "/images/clients/universal.webp", category: "Enterprise" },
   { name: "Vuespace", logo: "/images/clients/vuespace.png", category: "Startup" }
@@ -161,30 +160,23 @@ export const clients = [
 
 export const testimonials = [
   {
-    quote: "Working with Metamorph.live was a complete game-changer. They unified our entire brand visual style and built our custom Client Log Portal. Our client retention has gone up and our admin overhead is virtually gone.",
-    name: "Sarah Jenkins",
-    company: "CEO, Krypton Technologies",
+    quote: "Metamorph understood our needs and delivered creative, professional, and effective solutions. Their team was easy to work with, communicated clearly, and completed everything with great attention to detail. We are very happy with the results and highly recommend Metamorph.",
+    name: "Jasir Adattil",
+    company: "Bella Malasiya",
     rating: 5,
     featured: true
   },
   {
-    quote: "Our social engagement was stagnant. Metamorph.live's Reels framework blew our expectations out of the water. Over 18 viral reels later, our sales are up 40%.",
-    name: "Marcus Vance",
-    company: "Marketing Director, Vibe Fashion House",
+    quote: "We appreciated their clear communication, fresh ideas, and attention to detail. Metamorph completed the project with great quality and professionalism",
+    name: "Shanas Kurikkal",
+    company: "CEO,Vuespace",
     rating: 5,
     featured: false
   },
   {
-    quote: "Their team worked seamlessly. They understood our technical constraints and delivered a Next.js platform that operates perfectly. Highly recommend their IT and Branding stack.",
-    name: "David Chen",
-    company: "CTO, Horizon Group",
-    rating: 5,
-    featured: false
-  },
-  {
-    quote: "Our brand perception completely transformed. Metamorph.live delivered a stunning visual identity and style guide that aligned our product, marketing, and sales materials. We are thrilled with the results.",
-    name: "Elena Rostova",
-    company: "Founder, Aurora Wellness",
+    quote: "Metamorph is a dependable creative partner for any growing business. Their team delivers quality work, understands client needs, and provides excellent support.",
+    name: "Jobin TK",
+    company: "Edu Star",
     rating: 5,
     featured: false
   }

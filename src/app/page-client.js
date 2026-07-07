@@ -29,6 +29,21 @@ export default function HomeClient() {
   const processSectionRef = useRef(null);
   const connectorLineRef = useRef(null);
 
+  const [currentTestimonialIdx, setCurrentTestimonialIdx] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFading(true);
+      setTimeout(() => {
+        setCurrentTestimonialIdx((prev) => (prev + 1) % testimonials.length);
+        setIsFading(false);
+      }, 500); // 500ms fade duration
+    }, 5000); // Change testimonial every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -98,8 +113,8 @@ export default function HomeClient() {
     "/images/posters/poster10.jpg",
   ];
 
-  // Get featured client testimonial
-  const featuredTestimonial = testimonials.find((t) => t.featured) || testimonials[0];
+  // Get current testimonial based on state
+  const currentTestimonial = testimonials[currentTestimonialIdx] || testimonials[0];
 
   return (
     <div ref={containerRef} className="w-full relative" style={{ backgroundColor: "#12130f" }}>
@@ -148,7 +163,7 @@ export default function HomeClient() {
                 className="block text-white text-[13vw] sm:text-[11vw] md:text-[9vw] lg:text-[8.5rem] xl:text-[9.5rem]"
                 style={{ transform: "translateY(110%)", animation: "heroLineUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.3s forwards" }}
               >
-                MORPH 
+                MORPH
               </span>
             </span>
             {/* Line 2 — outlined */}
@@ -194,10 +209,10 @@ export default function HomeClient() {
               <div key={rep} className="flex items-center">
                 {["Branding", "Growth Marketing", "Media Production", "IT Solutions", "AI & Automations"].map((item, i) => (
                   <div key={i} className="flex items-center gap-6 px-6 py-4">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/25 whitespace-nowrap">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/80 whitespace-nowrap">
                       {item}
                     </span>
-                    <span className="w-1 h-1 rounded-full bg-[#ace539]/30 flex-shrink-0" />
+                    <span className="w-1 h-1 rounded-full bg-[#ace539]/60 flex-shrink-0" />
                   </div>
                 ))}
               </div>
@@ -438,13 +453,13 @@ export default function HomeClient() {
               {[...logoRow1, ...logoRow2, ...logoRow1, ...logoRow2].map((logo, idx) => (
                 <div
                   key={`marquee-${idx}`}
-                  className="shrink-0 flex items-center justify-center min-w-24 h-12 opacity-40 hover:opacity-90 transition-all duration-300"
+                  className={`shrink-0 flex items-center justify-center opacity-40 hover:opacity-100 transition-all duration-300 group ${logo.bgWhite ? "bg-white p-2 md:p-3 rounded-lg" : ""} ${logo.hoverBgWhite ? "p-2 md:p-3 rounded-lg hover:bg-white" : ""} ${logo.scale ? "h-16 md:h-20 min-w-32 md:min-w-40" : "h-12 md:h-14 min-w-24 md:min-w-28"}`}
                 >
                   <img
                     src={logo.logo}
                     alt={logo.name}
                     loading="lazy"
-                    className="max-w-[120px] max-h-10 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className={`object-contain brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300 ${logo.scale ? "max-w-[160px] max-h-16 md:max-w-[200px] md:max-h-20" : "max-w-[120px] max-h-12"}`}
                   />
                 </div>
               ))}
@@ -459,21 +474,23 @@ export default function HomeClient() {
           {/* Minimal Quote Icon */}
           <IconQuote className="w-8 h-8 text-[#ace539] mb-8 opacity-80" />
 
-          <p className="font-display font-medium text-2xl md:text-3xl lg:text-4xl text-slate-200 leading-[1.4] mb-10">
-            "{featuredTestimonial.quote}"
-          </p>
+          <div className={`transition-opacity duration-500 flex flex-col items-center ${isFading ? 'opacity-0' : 'opacity-100'}`}>
+            <p className="font-display font-medium text-2xl md:text-3xl lg:text-4xl text-slate-200 leading-[1.4] mb-10">
+              "{currentTestimonial.quote}"
+            </p>
 
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[#1a1b16] border border-white/10 text-white flex items-center justify-center font-display font-bold text-sm shrink-0">
-              {featuredTestimonial.name.split(" ").map((n) => n[0]).join("")}
-            </div>
-            <div className="text-left">
-              <span className="block font-display font-bold text-base text-white tracking-wide">
-                {featuredTestimonial.name}
-              </span>
-              <span className="block font-sans text-xs text-slate-400 uppercase tracking-widest mt-0.5">
-                {featuredTestimonial.company}
-              </span>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-[#1a1b16] border border-white/10 text-white flex items-center justify-center font-display font-bold text-sm shrink-0">
+                {currentTestimonial.name.split(" ").map((n) => n[0]).join("")}
+              </div>
+              <div className="text-left">
+                <span className="block font-display font-bold text-base text-white tracking-wide">
+                  {currentTestimonial.name}
+                </span>
+                <span className="block font-sans text-xs text-slate-400 uppercase tracking-widest mt-0.5">
+                  {currentTestimonial.company}
+                </span>
+              </div>
             </div>
           </div>
         </div>

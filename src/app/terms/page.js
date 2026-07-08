@@ -1,6 +1,9 @@
 export const metadata = {
-  title: "Metamorph.live",
+  title: "Terms of Service | Metamorph.live",
   description: "Metamorph.live Terms of Service. For enquiries contact hello@metamorph.solutions.",
+  alternates: {
+    canonical: "https://metamorph.live/terms",
+  },
 };
 
 export default function TermsPage() {

@@ -2,14 +2,38 @@ import Link from "next/link";
 import { services } from "@/lib/data";
 import { IconCheck, IconArrowRight, IconBolt } from "@tabler/icons-react";
 
+import SchemaMarkup from "@/components/SEO/SchemaMarkup";
+
 export const metadata = {
-  title: "Metamorph.live",
-  description: "Explore our full suite: brand identity, growth marketing, reels & media production, and Next.js web platforms.",
+  title: "Services | Metamorph.live - Creative Branding & IT Agency",
+  description: "Explore our full suite of services: Brand Identity, Growth Marketing, Media Production, and Custom Next.js Web Platforms & IT Solutions.",
+  alternates: {
+    canonical: "https://metamorph.live/services",
+  },
 };
 
 export default function ServicesPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": services.map((service, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Service",
+        "name": service.name,
+        "description": service.description,
+        "provider": {
+          "@type": "Organization",
+          "name": "Metamorph.live"
+        }
+      }
+    }))
+  };
+
   return (
     <div className="w-full bg-[#050505] min-h-screen text-white font-sans selection:bg-white/20 pb-32 pt-32">
+      <SchemaMarkup schema={serviceSchema} />
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex flex-col gap-6">
         
         {/* HERO BENTO */}
@@ -45,7 +69,7 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="mb-10 flex-grow">
-                  <h3 className="text-3xl md:text-4xl font-display font-medium text-white mb-4">{service.name}</h3>
+                  <h2 className="text-3xl md:text-4xl font-display font-medium text-white mb-4">{service.name}</h2>
                   <p className="text-white/50 text-base leading-relaxed">{service.description}</p>
                 </div>
 

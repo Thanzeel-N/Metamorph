@@ -10,6 +10,7 @@ import {
   IconSettingsAutomation,
   IconChevronRight,
 } from "@tabler/icons-react";
+import Image from "next/image";
 
 export default function WorkstationsScroll() {
   const [activeTab, setActiveTab] = useState(0);
@@ -42,9 +43,11 @@ export default function WorkstationsScroll() {
           </div>
           <div className="flex-grow grid grid-cols-3 gap-2 my-2 items-center">
             <div className="col-span-2 aspect-video bg-black rounded-sm border border-white/10 relative flex items-center justify-center overflow-hidden">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=180&q=80"
-                className="w-full h-full object-cover opacity-60"
+                className="object-cover opacity-60"
+                fill
+                sizes="(max-width: 768px) 50vw, 20vw"
                 alt="grading thumbnail"
               />
               <div className="absolute top-1.5 right-1.5 bg-black/60 px-1 py-0.5 text-[7px] text-[#ace539]">00:12:04</div>

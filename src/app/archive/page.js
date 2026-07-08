@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { IconArrowRight, IconPhoto } from "@tabler/icons-react";
+import Image from "next/image";
 
 export const metadata = {
-  title: "Metamorph.live",
+  title: "Visual Vault — Archive | Metamorph.live",
   description: "Explore our archive of premium visual designs, promotional campaigns, and brand poster assets.",
+  alternates: {
+    canonical: "https://metamorph.live/archive",
+  },
 };
 
 const ARCHIVE_POSTERS = [
@@ -143,11 +147,12 @@ export default function ArchivePage() {
             >
               {/* Image box */}
               <div className="w-full aspect-[3/4] bg-black rounded-2xl overflow-hidden relative">
-                <img 
+                <Image 
                   src={poster.img} 
                   alt={poster.title}
-                  className="w-full h-full object-cover transition-transform duration-750 group-hover:scale-103 group-hover:brightness-105"
-                  loading="lazy"
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
+                  className="object-cover transition-transform duration-750 group-hover:scale-[1.03] group-hover:brightness-105"
                 />
                 <div className="absolute inset-0 bg-[#ace539]/15 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>

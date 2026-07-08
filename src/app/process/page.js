@@ -2,8 +2,11 @@ import Link from "next/link";
 import { IconBolt, IconArrowRight, IconChecks } from "@tabler/icons-react";
 
 export const metadata = {
-  title: "Metamorph.live",
+  title: "Our Process | Metamorph.live",
   description: "Learn how we translate business challenges into branding systems, media assets, and high-performance software applications.",
+  alternates: {
+    canonical: "https://metamorph.live/process",
+  },
 };
 
 const PROCESS_STEPS = [

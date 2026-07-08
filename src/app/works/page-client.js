@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { works } from "@/lib/data";
 import { IconArrowRight } from "@tabler/icons-react";
+import Image from "next/image";
 
 export default function WorksClient() {
   const [filter, setFilter] = useState("all");
@@ -67,11 +68,12 @@ export default function WorksClient() {
 
               {/* Image Container */}
               <div className="w-full aspect-[4/3] bg-black rounded-3xl overflow-hidden relative z-10 mb-6">
-                <img
+                <Image
                   src={work.image}
                   alt={work.name}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
                 
@@ -86,7 +88,7 @@ export default function WorksClient() {
               {/* Content */}
               <div className="px-2 pb-2 flex flex-col flex-grow z-10 relative">
                 <p className="text-xs uppercase tracking-widest text-white/40 mb-2">{work.client}</p>
-                <h3 className="font-display font-medium text-2xl text-white mb-3 group-hover:text-[#ace539] transition-colors">{work.name}</h3>
+                <h2 className="font-display font-medium text-2xl text-white mb-3 group-hover:text-[#ace539] transition-colors">{work.name}</h2>
                 <p className="text-white/50 text-sm leading-relaxed mb-8 max-w-sm line-clamp-2">
                   {work.challenge}
                 </p>

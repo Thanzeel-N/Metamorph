@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { IconBrandInstagram, IconBrandLinkedin, IconBrandBehance, IconArrowUpRight } from "@tabler/icons-react";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -28,14 +29,22 @@ export default function Footer() {
         {/* Middle: Links Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 mb-20 md:mb-32">
           <div className="col-span-2 md:col-span-1">
-            <img src="/images/logo/metamorph1.png" alt="Metamorph Logo" loading="lazy" className="h-14 w-auto object-contain" />
+            <div className="relative h-14 w-40">
+              <Image 
+                src="/images/logo/metamorph1.png" 
+                alt="Metamorph Logo" 
+                fill
+                sizes="160px"
+                className="object-contain object-left"
+              />
+            </div>
             <p className="text-slate-400 mt-6 text-sm max-w-xs font-sans leading-relaxed">
               From identity to IT — strategy, design, media, and tech under one roof.
             </p>
             <div className="flex items-center gap-4 pt-8">
-              <a href="#" className="text-slate-500 hover:text-[#ace539] transition-colors"><IconBrandLinkedin className="w-5 h-5" /></a>
-              <a href="#" className="text-slate-500 hover:text-[#ace539] transition-colors"><IconBrandInstagram className="w-5 h-5" /></a>
-              <a href="#" className="text-slate-500 hover:text-[#ace539] transition-colors"><IconBrandBehance className="w-5 h-5" /></a>
+              <a href="#" aria-label="LinkedIn" className="text-slate-500 hover:text-[#ace539] transition-colors"><IconBrandLinkedin className="w-5 h-5" /></a>
+              <a href="#" aria-label="Instagram" className="text-slate-500 hover:text-[#ace539] transition-colors"><IconBrandInstagram className="w-5 h-5" /></a>
+              <a href="#" aria-label="Behance" className="text-slate-500 hover:text-[#ace539] transition-colors"><IconBrandBehance className="w-5 h-5" /></a>
             </div>
           </div>
 

@@ -2,14 +2,22 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { works } from "@/lib/data";
 import { IconArrowRight, IconCalendar, IconUser, IconFolder, IconTools } from "@tabler/icons-react";
+import Image from "next/image";
+import SchemaMarkup from "@/components/SEO/SchemaMarkup";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const project = works.find((w) => w.slug === slug);
   if (!project) {
-    return { title: "Metamorph.live" };
+    return { title: "Work Not Found | Metamorph.live" };
   }
-  return { title: "Metamorph.live" };
+  return { 
+    title: `${project.name} | Metamorph.live Case Study`,
+    description: project.challenge,
+    alternates: {
+      canonical: `https://metamorph.live/works/${project.slug}`,
+    },
+  };
 }
 
 export default async function WorkDetailPage({ params }) {
@@ -26,15 +34,31 @@ export default async function WorkDetailPage({ params }) {
   // Compute next project link dynamically using nextSlug
   const nextWork = works.find((w) => w.slug === work.nextSlug) || works[0];
 
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "Project",
+    name: work.name,
+    description: work.challenge,
+    url: `https://metamorph.live/works/${work.slug}`,
+    image: `https://metamorph.live${work.image}`,
+    provider: {
+      "@type": "Organization",
+      "name": "Metamorph.live"
+    }
+  };
+
   return (
     <div className="w-full bg-[#12130f] pt-0">
+      <SchemaMarkup schema={projectSchema} />
       {/* FULL-WIDTH HERO IMAGE */}
       <section className="relative h-[60vh] md:h-[80vh] w-full bg-slate-900 overflow-hidden">
-        <img
+        <Image
           src={work.image}
           alt={work.name}
-          loading="lazy"
-          className="w-full h-full object-cover opacity-80"
+          priority
+          fill
+          sizes="100vw"
+          className="object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#12130f] via-transparent to-black/50" />
         
@@ -165,12 +189,13 @@ export default async function WorkDetailPage({ params }) {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {work.gallery.map((img, idx) => (
-                <div key={idx} className="rounded-lg overflow-hidden shadow-sm aspect-4/3 bg-slate-800">
-                  <img
+                <div key={idx} className="rounded-lg overflow-hidden shadow-sm aspect-4/3 bg-slate-800 relative">
+                  <Image
                     src={img}
                     alt={`Deliverable ${idx + 1}`}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-103"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-300 hover:scale-[1.03]"
                   />
                 </div>
               ))}

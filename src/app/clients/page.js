@@ -1,8 +1,11 @@
 import ClientsClient from "./page-client";
 
 export const metadata = {
-  title: "Metamorph.live",
-  description: "Trusted by startups and enterprises. See what our clients say about working with Metamorph.live.",
+  title: "Our Clients | Metamorph.live",
+  description: "Trusted by startups and enterprises globally. See what our clients say about working with Metamorph.live.",
+  alternates: {
+    canonical: "https://metamorph.live/clients",
+  },
 };
 
 export default function Page() {

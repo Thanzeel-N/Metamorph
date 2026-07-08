@@ -3,7 +3,10 @@ import ContactClient from "./page-client";
 
 export const metadata = {
   title: "Start a Project — Contact | Metamorph.live",
-  description: "Tell us what you need. We'll scope, design, and build your full digital stack.",
+  description: "Ready to scale? Tell us what you need. We'll scope, design, and build your full digital stack.",
+  alternates: {
+    canonical: "https://metamorph.live/contact",
+  },
 };
 
 export default function Page() {

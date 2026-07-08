@@ -1,6 +1,9 @@
 export const metadata = {
-  title: "Metamorph.live",
+  title: "Privacy Policy | Metamorph.live",
   description: "Metamorph.live Privacy Policy. For enquiries contact hello@metamorph.solutions.",
+  alternates: {
+    canonical: "https://metamorph.live/privacy",
+  },
 };
 
 export default function PrivacyPage() {

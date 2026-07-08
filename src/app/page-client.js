@@ -265,7 +265,7 @@ export default function HomeClient() {
           {/* Drawer 1: Branding */}
           <div className="group relative flex-1 hover:flex-[3] md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border-b md:border-b-0 md:border-r border-white/10 overflow-hidden cursor-pointer bg-transparent">
             <div className="absolute inset-0 w-full h-full">
-              <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop" alt="Branding" loading="lazy" className="w-full h-full object-cover opacity-20 group-hover:opacity-60 transition-opacity duration-700 mix-blend-luminosity scale-105 group-hover:scale-100" />
+              <Image src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop" alt="Branding Strategy and Design" fill sizes="(max-width: 768px) 100vw, 33vw" priority className="object-cover opacity-20 group-hover:opacity-60 transition-opacity duration-700 mix-blend-luminosity scale-105 group-hover:scale-100" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#12130f] via-[#12130f]/80 to-transparent"></div>
             </div>
 
@@ -283,7 +283,7 @@ export default function HomeClient() {
                 </div>
                 <span className="text-[#ace539] font-display font-bold text-lg md:text-2xl uppercase tracking-widest">01 — Branding</span>
               </div>
-              <h3 className="text-white text-3xl md:text-5xl lg:text-6xl font-display font-extrabold mb-4 max-w-2xl leading-tight">Identity Built to Scale.</h3>
+              <h2 className="text-white text-3xl md:text-5xl lg:text-6xl font-display font-extrabold mb-4 max-w-2xl leading-tight">Identity Built to Scale.</h2>
               <p className="text-slate-300 text-base md:text-xl max-w-lg mb-8 leading-relaxed">
                 Your brand is the first impression and the lasting one. We design identities that are distinct, purposeful, and dominate their markets.
               </p>
@@ -296,7 +296,7 @@ export default function HomeClient() {
           {/* Drawer 2: Marketing */}
           <div className="group relative flex-1 hover:flex-[3] md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border-b md:border-b-0 md:border-r border-white/10 overflow-hidden cursor-pointer bg-transparent">
             <div className="absolute inset-0 w-full h-full">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" alt="Marketing" loading="lazy" className="w-full h-full object-cover opacity-20 group-hover:opacity-60 transition-opacity duration-700 mix-blend-luminosity scale-105 group-hover:scale-100" />
+              <Image src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" alt="Digital Marketing and Growth" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-20 group-hover:opacity-60 transition-opacity duration-700 mix-blend-luminosity scale-105 group-hover:scale-100" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#12130f] via-[#12130f]/80 to-transparent"></div>
             </div>
 
@@ -312,7 +312,7 @@ export default function HomeClient() {
                 </div>
                 <span className="text-[#ace539] font-display font-bold text-lg md:text-2xl uppercase tracking-widest">02 — Marketing</span>
               </div>
-              <h3 className="text-white text-3xl md:text-5xl lg:text-6xl font-display font-extrabold mb-4 max-w-2xl leading-tight">Strategy meets Execution.</h3>
+              <h2 className="text-white text-3xl md:text-5xl lg:text-6xl font-display font-extrabold mb-4 max-w-2xl leading-tight">Strategy meets Execution.</h2>
               <p className="text-slate-300 text-base md:text-xl max-w-lg mb-8 leading-relaxed">
                 We build marketing systems that attract the right audience and turn them into customers through data-driven campaigns.
               </p>
@@ -325,7 +325,7 @@ export default function HomeClient() {
           {/* Drawer 3: Media */}
           <div className="group relative flex-1 hover:flex-[3] md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border-b md:border-b-0 md:border-r border-white/10 overflow-hidden cursor-pointer bg-transparent">
             <div className="absolute inset-0 w-full h-full">
-              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop" alt="Media" loading="lazy" className="w-full h-full object-cover opacity-20 group-hover:opacity-60 transition-opacity duration-700 mix-blend-luminosity scale-105 group-hover:scale-100" />
+              <Image src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop" alt="Media Production and Photography" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-20 group-hover:opacity-60 transition-opacity duration-700 mix-blend-luminosity scale-105 group-hover:scale-100" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#12130f] via-[#12130f]/80 to-transparent"></div>
             </div>
 
@@ -341,7 +341,7 @@ export default function HomeClient() {
                 </div>
                 <span className="text-[#ace539] font-display font-bold text-lg md:text-2xl uppercase tracking-widest">03 — Media Prod</span>
               </div>
-              <h3 className="text-white text-3xl md:text-5xl lg:text-6xl font-display font-extrabold mb-4 max-w-2xl leading-tight">Content that Converts.</h3>
+              <h2 className="text-white text-3xl md:text-5xl lg:text-6xl font-display font-extrabold mb-4 max-w-2xl leading-tight">Content that Converts.</h2>
               <p className="text-slate-300 text-base md:text-xl max-w-lg mb-8 leading-relaxed">
                 In a scroll-first world, content is currency. We produce media (reels, motion, photography) that stops thumbs and starts conversations.
               </p>
@@ -354,7 +354,7 @@ export default function HomeClient() {
           {/* Drawer 4: IT & Tech */}
           <div className="group relative flex-1 hover:flex-[3] md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden cursor-pointer bg-transparent">
             <div className="absolute inset-0 w-full h-full">
-              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" alt="IT Solutions" loading="lazy" className="w-full h-full object-cover opacity-20 group-hover:opacity-60 transition-opacity duration-700 mix-blend-luminosity scale-105 group-hover:scale-100" />
+              <Image src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" alt="IT Solutions and Web Development" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover opacity-20 group-hover:opacity-60 transition-opacity duration-700 mix-blend-luminosity scale-105 group-hover:scale-100" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#12130f] via-[#12130f]/80 to-transparent"></div>
             </div>
 
@@ -370,7 +370,7 @@ export default function HomeClient() {
                 </div>
                 <span className="text-[#ace539] font-display font-bold text-lg md:text-2xl uppercase tracking-widest">04 — IT Stack</span>
               </div>
-              <h3 className="text-white text-3xl md:text-5xl lg:text-6xl font-display font-extrabold mb-4 max-w-2xl leading-tight">High-Performance Tech.</h3>
+              <h2 className="text-white text-3xl md:text-5xl lg:text-6xl font-display font-extrabold mb-4 max-w-2xl leading-tight">High-Performance Tech.</h2>
               <p className="text-slate-300 text-base md:text-xl max-w-lg mb-8 leading-relaxed">
                 Your digital infrastructure should work as hard as your team. We build scalable Next.js websites, platforms, custom tools, and automations.
               </p>
@@ -410,7 +410,7 @@ export default function HomeClient() {
                 key={`row1-${idx}`}
                 className="w-[200px] h-[260px] md:w-[320px] md:h-[400px] shrink-0 rounded-2xl overflow-hidden relative cursor-pointer group/poster filter grayscale-[50%] brightness-75 hover:grayscale-0 hover:brightness-110 transition-all duration-500 hover:scale-[1.03] hover:z-20 hover:shadow-[0_0_50px_rgba(172,229,57,0.15)]"
               >
-                <img src={img} alt="Client Poster" loading="lazy" className="w-full h-full object-cover" />
+                <Image src={img} alt="Client Poster" fill sizes="(max-width: 768px) 200px, 320px" className="object-cover" />
                 <div className="absolute inset-0 bg-[#ace539]/20 mix-blend-overlay opacity-0 group-hover/poster:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
@@ -426,7 +426,7 @@ export default function HomeClient() {
                 key={`row2-${idx}`}
                 className="w-[200px] h-[260px] md:w-[320px] md:h-[400px] shrink-0 rounded-2xl overflow-hidden relative cursor-pointer group/poster filter grayscale-[50%] brightness-75 hover:grayscale-0 hover:brightness-110 transition-all duration-500 hover:scale-[1.03] hover:z-20 hover:shadow-[0_0_50px_rgba(172,229,57,0.15)]"
               >
-                <img src={img} alt="Client Poster" loading="lazy" className="w-full h-full object-cover" />
+                <Image src={img} alt="Client Poster" fill sizes="(max-width: 768px) 200px, 320px" className="object-cover" />
                 <div className="absolute inset-0 bg-[#ace539]/20 mix-blend-overlay opacity-0 group-hover/poster:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
@@ -455,10 +455,11 @@ export default function HomeClient() {
                   key={`marquee-${idx}`}
                   className={`shrink-0 flex items-center justify-center opacity-40 hover:opacity-100 transition-all duration-300 group ${logo.bgWhite ? "bg-white p-2 md:p-3 rounded-lg" : ""} ${logo.hoverBgWhite ? "p-2 md:p-3 rounded-lg hover:bg-white" : ""} ${logo.scale ? "h-16 md:h-20 min-w-32 md:min-w-40" : "h-12 md:h-14 min-w-24 md:min-w-28"}`}
                 >
-                  <img
+                  <Image
                     src={logo.logo}
                     alt={logo.name}
-                    loading="lazy"
+                    width={200}
+                    height={80}
                     className={`object-contain brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300 ${logo.scale ? "max-w-[160px] max-h-16 md:max-w-[200px] md:max-h-20" : "max-w-[120px] max-h-12"}`}
                   />
                 </div>

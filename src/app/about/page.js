@@ -8,9 +8,15 @@ import {
   IconArrowRight 
 } from "@tabler/icons-react";
 
+import Image from "next/image";
+import SchemaMarkup from "@/components/SEO/SchemaMarkup";
+
 export const metadata = {
-  title: "Metamorph.live",
-  description: "One integrated team of designers, strategists, and engineers.",
+  title: "About Us | Metamorph.live - Creative Branding & IT Agency",
+  description: "Metamorph is an integrated strike team of designers, strategists, and engineers building digital flagship experiences.",
+  alternates: {
+    canonical: "https://metamorph.live/about",
+  },
 };
 
 export default function AboutPage() {
@@ -32,8 +38,17 @@ export default function AboutPage() {
     },
   ];
 
+  const teamSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About Metamorph.live",
+    description: "One integrated team of designers, strategists, and engineers.",
+    url: "https://metamorph.live/about",
+  };
+
   return (
     <div className="w-full bg-[#050505] min-h-screen text-white font-sans selection:bg-white/20 pb-32 pt-32">
+      <SchemaMarkup schema={teamSchema} />
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex flex-col gap-6">
         
         {/* HERO BENTO */}
@@ -61,7 +76,7 @@ export default function AboutPage() {
                {valuePillars[0].icon}
             </div>
             <div className="relative z-10">
-              <h3 className="text-2xl md:text-3xl font-display font-medium text-white mb-3">{valuePillars[0].title}</h3>
+              <h2 className="text-2xl md:text-3xl font-display font-medium text-white mb-3">{valuePillars[0].title}</h2>
               <p className="text-white/50 text-lg leading-relaxed max-w-md">{valuePillars[0].desc}</p>
             </div>
           </div>
@@ -72,7 +87,7 @@ export default function AboutPage() {
                {valuePillars[1].icon}
             </div>
             <div>
-              <h3 className="text-2xl font-display font-medium text-white mb-3">{valuePillars[1].title}</h3>
+              <h2 className="text-2xl font-display font-medium text-white mb-3">{valuePillars[1].title}</h2>
               <p className="text-white/50 leading-relaxed text-base">{valuePillars[1].desc}</p>
             </div>
           </div>
@@ -85,7 +100,7 @@ export default function AboutPage() {
                {valuePillars[2].icon}
             </div>
             <div>
-              <h3 className="text-2xl font-display font-medium text-white mb-3">{valuePillars[2].title}</h3>
+              <h2 className="text-2xl font-display font-medium text-white mb-3">{valuePillars[2].title}</h2>
               <p className="text-white/50 leading-relaxed text-base">{valuePillars[2].desc}</p>
             </div>
           </div>
@@ -100,7 +115,7 @@ export default function AboutPage() {
                   We don't do handoffs. Every discipline sits in the same room, iterating in real-time.
                 </p>
                 <div className="flex justify-between items-end mt-12">
-                  <h3 className="text-7xl md:text-9xl font-display font-bold tracking-tighter leading-none">100%</h3>
+                  <span className="text-7xl md:text-9xl font-display font-bold tracking-tighter leading-none block">100%</span>
                   <p className="text-sm font-bold uppercase tracking-widest text-[#0a0a0a]/60 pb-2">In-house</p>
                 </div>
              </div>
@@ -135,10 +150,12 @@ export default function AboutPage() {
                       className="w-full h-full opacity-60 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
                     />
                   ) : (
-                    <img 
+                    <Image 
                       src={member.image} 
                       alt={member.name}
-                      className="w-full h-full object-cover filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 25vw"
+                      className="object-cover filter grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                     />
                   )}
                 </div>
@@ -174,7 +191,7 @@ export default function AboutPage() {
                 <div className="absolute -left-[6px] md:left-0 top-0 md:-top-[6px] w-3 h-3 rounded-full bg-white/20 border-2 border-[#111111] group-hover:bg-[#ace539] group-hover:scale-125 transition-all duration-300" />
                 
                 <span className="block font-display font-bold text-3xl text-[#ace539] mb-4">{milestone.year}</span>
-                <h4 className="font-display font-bold text-lg text-white mb-2 group-hover:text-[#ace539] transition-colors">{milestone.title}</h4>
+                <h3 className="font-display font-bold text-lg text-white mb-2 group-hover:text-[#ace539] transition-colors">{milestone.title}</h3>
                 <p className="text-sm text-white/50 leading-relaxed max-w-xs">{milestone.desc}</p>
               </div>
             ))}

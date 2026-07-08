@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const STEPS = [
   {
@@ -64,11 +65,13 @@ export default function ProcessScroll() {
       <div className="sticky top-0 h-screen w-full overflow-hidden z-0 pointer-events-none">
         {/* Background Images with smooth crossfade */}
         {STEPS.map((step, idx) => (
-          <img
+          <Image
             key={idx}
             src={step.img}
             alt={step.title}
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
+            fill
+            sizes="100vw"
+            className="object-cover transition-opacity duration-1000 ease-in-out"
             style={{
               opacity: activeIdx === idx ? 1 : 0,
               filter: "brightness(0.35) saturate(0.7)",

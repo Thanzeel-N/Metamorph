@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IconArrowRight, IconMenu2, IconX } from "@tabler/icons-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,8 +35,17 @@ export default function Navbar() {
       <nav className={`fixed left-0 right-0 w-full z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${navClass}`}>
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center select-none hover:opacity-80 transition-opacity">
-            <img src="/images/logo/metamorph1.png" alt="Metamorph Logo" className="h-9 md:h-11 w-auto object-contain" loading="lazy" />
+          <Link href="/" className="flex items-center select-none hover:opacity-80 transition-opacity" aria-label="Home">
+            <div className="relative h-9 md:h-11 w-32 md:w-40">
+              <Image 
+                src="/images/logo/metamorph1.png" 
+                alt="Metamorph Logo" 
+                fill
+                sizes="(max-width: 768px) 128px, 160px"
+                className="object-contain" 
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -55,7 +65,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <div className="lg:hidden flex items-center">
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-white p-2">
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-white p-2" aria-label="Toggle mobile menu" aria-expanded={mobileMenuOpen}>
               {mobileMenuOpen ? <IconX className="w-6 h-6" /> : <IconMenu2 className="w-6 h-6" />}
             </button>
           </div>

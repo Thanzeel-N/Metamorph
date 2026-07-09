@@ -25,6 +25,9 @@ export const metadata = {
     template: "%s | Metamorph.live",
   },
   description: "Complete Business Solutions spanning Branding, Growth Marketing, Media Production, and IT Systems (Next.js web apps, platforms, dashboards).",
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "MHE5cmqqJ8skSvQumorwPLTDIO63z_KNiD18ovjHnuo",
+  },
   keywords: ["Branding Agency", "Creative Agency", "Digital Marketing", "Web Design", "Web Development", "Software Development", "IT Solutions", "Media Production"],
   authors: [{ name: "Metamorph.live" }],
   creator: "Metamorph.live",

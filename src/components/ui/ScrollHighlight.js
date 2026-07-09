@@ -49,7 +49,7 @@ export default function ScrollHighlight() {
     };
   }, []);
 
-  // Word list parsed from: "We handle [Branding] [Marketing] [Media] and [IT] — so you don't have to split your team."
+  // Word list parsed from: "We handle [Branding] [Marketing] [Media] and [IT] so you don't have to split your team."
   const wordsData = [
     { text: "We", bracketed: false },
     { text: "handle", bracketed: false },

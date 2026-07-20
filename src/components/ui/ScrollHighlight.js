@@ -58,7 +58,6 @@ export default function ScrollHighlight() {
     { text: "[Media]", bracketed: true, label: "Media" },
     { text: "and", bracketed: false },
     { text: "[IT]", bracketed: true, label: "IT" },
-    { text: "—", bracketed: false },
     { text: "so", bracketed: false },
     { text: "you", bracketed: false },
     { text: "don't", bracketed: false },

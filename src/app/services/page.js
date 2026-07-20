@@ -86,10 +86,12 @@ export default function ServicesPage() {
                 </div>
 
                 <Link
-                  href={`/contact?service=${service.id}`}
+                  href={service.externalLink || `/contact?service=${service.id}`}
+                  target={service.externalLink ? "_blank" : undefined}
+                  rel={service.externalLink ? "noopener noreferrer" : undefined}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 text-sm font-medium hover:bg-white hover:text-black transition-all duration-300 w-fit"
                 >
-                  Start Project <IconArrowRight className="w-4 h-4" />
+                  {service.externalLink ? "View Portfolio" : "Start Project"} <IconArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import { Outfit, Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Preloader from "@/components/layout/Preloader";
 import SchemaMarkup from "@/components/SEO/SchemaMarkup";
 import "./globals.css";
 
@@ -28,7 +29,14 @@ export const metadata = {
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "MHE5cmqqJ8skSvQumorwPLTDIO63z_KNiD18ovjHnuo",
   },
-  keywords: ["Branding Agency", "Creative Agency", "Digital Marketing", "Web Design", "Web Development", "Software Development", "IT Solutions", "Media Production"],
+  keywords: [
+    "Branding Agency", "Creative Agency", "Digital Marketing", "Web Design", 
+    "Web Development", "Software Development", "IT Solutions", "Media Production",
+    "Metamorph.live", "Marketing Services", "Website Portfolio", 
+    "Marketing Portfolio", "Tech Solutions", "Creative IT Agency",
+    "Digital Agency near me", "Digital Agency Kerala", "All Kerala Branding", 
+    "Kerala Web Design", "Best Digital Marketing Kerala"
+  ],
   authors: [{ name: "Metamorph.live" }],
   creator: "Metamorph.live",
   publisher: "Metamorph.live",
@@ -110,6 +118,7 @@ export default function RootLayout({ children }) {
         <SchemaMarkup schema={organizationSchema} />
       </head>
       <body suppressHydrationWarning className="min-h-full flex flex-col bg-brand-midnight text-foreground selection:bg-brand-violet selection:text-white">
+        <Preloader />
         <Navbar />
         <main className="flex-grow flex flex-col">
           {children}

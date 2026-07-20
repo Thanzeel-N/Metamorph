@@ -33,6 +33,7 @@ export const services = [
     ],
     whoIsItFor: "Brands ready to increase conversion velocity, expand reach, and build predictable funnels.",
     cta: "Get a Marketing Quote",
+    externalLink: "https://marketing.metamorph.live",
     bgColor: "bg-[#12130f]", // brand-navy (deep black-olive)
     textColor: "text-white",
     accentColor: "text-[#ace539]",
@@ -69,6 +70,7 @@ export const services = [
     ],
     whoIsItFor: "Enterprises needing robust, high-performance web systems and operational efficiency.",
     cta: "Get an IT Quote",
+    externalLink: "https://website.metamorph.live",
     bgColor: "bg-[#12130f]", // brand-navy (deep black-olive)
     textColor: "text-white",
     accentColor: "text-[#ace539]",

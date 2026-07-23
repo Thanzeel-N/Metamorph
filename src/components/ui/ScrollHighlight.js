@@ -58,14 +58,11 @@ export default function ScrollHighlight() {
     { text: "[Media]", bracketed: true, label: "Media" },
     { text: "and", bracketed: false },
     { text: "[IT]", bracketed: true, label: "IT" },
-    { text: "so", bracketed: false },
-    { text: "you", bracketed: false },
-    { text: "don't", bracketed: false },
-    { text: "have", bracketed: false },
-    { text: "to", bracketed: false },
-    { text: "split", bracketed: false },
-    { text: "your", bracketed: false },
-    { text: "team.", bracketed: false },
+    { text: "solution", bracketed: false },
+    { text: "all", bracketed: false },
+    { text: "under", bracketed: false },
+    { text: "one", bracketed: false },
+    { text: "roof.", bracketed: false },
   ];
 
   return (

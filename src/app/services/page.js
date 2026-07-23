@@ -35,11 +35,11 @@ export default function ServicesPage() {
     <div className="w-full bg-[#050505] min-h-screen text-white font-sans selection:bg-white/20 pb-32 pt-32">
       <SchemaMarkup schema={serviceSchema} />
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex flex-col gap-6">
-        
+
         {/* HERO BENTO */}
         <div className="w-full bg-[#111111] rounded-[2rem] md:rounded-[3rem] p-10 md:p-20 relative overflow-hidden flex flex-col justify-end min-h-[50vh] border border-white/5 shadow-2xl">
           <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#ace539]/20 blur-[120px] rounded-full pointer-events-none transform translate-x-1/4 -translate-y-1/4"></div>
-          
+
           <div className="relative z-10 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8">
               <span className="w-2 h-2 rounded-full bg-[#ace539]"></span>
@@ -54,12 +54,12 @@ export default function ServicesPage() {
         {/* SERVICES BENTO GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, idx) => (
-            <div 
-              key={service.id} 
+            <div
+              key={service.id}
               className="bg-[#111111] rounded-[2rem] md:rounded-[3rem] p-8 md:p-14 border border-white/5 flex flex-col relative overflow-hidden group hover:border-white/10 transition-colors duration-500"
             >
               <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/5 blur-[80px] rounded-full pointer-events-none group-hover:bg-white/10 transition-colors duration-700"></div>
-              
+
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex justify-between items-start mb-8">
                   <span className="text-xs font-medium text-[#ace539] uppercase tracking-widest">{service.number} — {service.name}</span>
@@ -101,7 +101,7 @@ export default function ServicesPage() {
         {/* CTA BENTO */}
         <div className="w-full bg-[#ace539] rounded-[2rem] md:rounded-[3rem] p-10 md:p-16 border border-[#ace539] mt-6 relative overflow-hidden flex flex-col md:flex-row justify-between items-center gap-8 group text-black">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:2rem_2rem] pointer-events-none" />
-          
+
           <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl font-display font-medium tracking-tight mb-4">
               Need a Custom Scope?
@@ -110,7 +110,7 @@ export default function ServicesPage() {
               We construct bespoke workflows based on your exact requirements. Let's talk about your project and build a tailored solution.
             </p>
           </div>
-          
+
           <Link
             href="/contact"
             className="relative z-10 shrink-0 px-8 py-4 bg-black text-white rounded-full font-medium flex items-center gap-2 hover:bg-black/80 transition-colors duration-300"
